@@ -1,26 +1,40 @@
-export interface IProject {
-  readonly name: string;
+import { ThunkAction, ThunkDispatch } from 'redux-thunk';
+import { store } from '..';
+import { TActions } from '../services/actions/types';
+
+export type TStore = ReturnType<typeof store.getState>;
+
+export type TDispatch = ThunkDispatch<TStore, never, TActions>;
+
+export type TThunk<ReturnType = void> = ThunkAction<
+  ReturnType,
+  TStore,
+  never,
+  TActions
+>;
+
+export interface ICurrencyData {
+  readonly ID: string;
+  readonly NumCode: string;
+  readonly CharCode: string;
+  readonly Nominal: number;
+  readonly Name: string;
+  readonly Value: number;
+  readonly Previous: number;
 }
 
-export interface IContact {
-  readonly index: number;
-  readonly title: string;
-  readonly link: string;
+export interface ICurrencies {
+  readonly [name: string]: ICurrencyData;
 }
 
-export interface IScreenshot {
-  readonly index: number;
-  readonly name: string;
-  readonly screenshot: string;
+export interface IData {
+  readonly Date?: string;
+  readonly PreviousDate?: string;
+  readonly PreviousURL?: string;
+  readonly Timestamp?: string;
+  readonly Valute?: ICurrencies;
 }
 
-export interface IProjectData {
-  readonly index: number;
-  readonly name: string;
-  readonly stack: string[];
-  readonly link?: string;
-  readonly image: string;
-  readonly linkCode: string;
-  readonly imageCode: string;
-  readonly screenshots?: IScreenshot[];
+export interface IFlag {
+  readonly [name: string]: string;
 }

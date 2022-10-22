@@ -1,0 +1,8 @@
+.converter-page {
+  width: 90vw;
+  max-width: 1280px;
+  min-height: calc(100vh - 80px - 50px - 90px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

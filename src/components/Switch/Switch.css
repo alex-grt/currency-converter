@@ -1,0 +1,33 @@
+.switch {
+  padding: 60px 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.switch__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.switch__cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.switch__label {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.switch__label:hover {
+  cursor: pointer;
+}
+
+.switch__radio:hover {
+  cursor: pointer;
+}

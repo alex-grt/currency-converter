@@ -24,9 +24,3 @@
   src: url('Inter-Bold.woff2?v=3.19') format('woff2'),
        url('Inter-Bold.woff?v=3.19') format('woff');
 }
-
-@font-face {
-  font-family: 'Neucha';
-  font-display: swap;
-  src: url('Neucha-Regular.ttf') format('truetype');
-}
