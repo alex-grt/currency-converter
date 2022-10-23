@@ -6,6 +6,9 @@
 Обратите внимание, что:  
 * вводимый текст должен быть на английском  
 * поддерживаемые коды валют расчётов: rub и usd  
+
+Стэк: React, Redux, TypeScript, HTML, CSS.
+
 ***
 
 [Ссылка на страницу проекта](https://alex-grt.github.io/currency-converter/)
