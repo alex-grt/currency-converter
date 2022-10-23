@@ -9,8 +9,8 @@ const NavigationPanel: FC = () => {
         to="/"
         className={({ isActive }) =>
           isActive
-            ? "nav-panel__link nav-panel__link_active"
-            : "nav-panel__link"
+            ? 'nav-panel__link nav-panel__link_active'
+            : 'nav-panel__link'
         }
         end
       >
@@ -20,8 +20,8 @@ const NavigationPanel: FC = () => {
         to="/rates"
         className={({ isActive }) =>
           isActive
-            ? "nav-panel__link nav-panel__link_active"
-            : "nav-panel__link"
+            ? 'nav-panel__link nav-panel__link_active'
+            : 'nav-panel__link'
         }
       >
         <p className="nav-panel__text">Курсы валют</p>

@@ -35,3 +35,14 @@
 .header__theme-icon_theme_light {
   fill: #383838;
 }
+
+@media screen and (max-width: 480px) {
+  .header__title {
+    font-size: 24px;
+  }
+
+  .header__theme-icon {
+    width: 24px;
+    height: 24px;
+  }
+}

@@ -1,5 +1,5 @@
 .converter {
-  padding: 10% 10px;
+  padding: 10% 0;
 }
 
 .converter__text {
@@ -61,6 +61,7 @@
 }
 
 .converter__button {
+  height: 32px;
   border: none;
   border-radius: 4px;
   padding: 0 10px;
@@ -92,4 +93,36 @@
   text-align: center;
   font-size: 36px;
   font-weight: 500;
+}
+
+@media screen and (max-width: 480px) {
+  .converter__text {
+    font-size: 14px;
+  }
+
+  .converter__text_theme_marked {
+    font-size: 12px;
+  }
+
+  .converter__text-marked {
+    font-size: 13px;
+  }
+
+  .converter__note-list {
+    padding-left: 20px;
+  }
+
+  .converter__form {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .converter__button {
+    height: 40px;
+  }
+
+  .converter__result {
+    margin: 40px auto 0;
+    font-size: 24px;
+  }
 }

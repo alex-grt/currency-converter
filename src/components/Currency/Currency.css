@@ -19,3 +19,22 @@
   font-size: 16px;
   font-weight: 400;
 }
+
+.currency__text_wrap {
+  word-break: break-all;
+}
+
+@media screen and (max-width: 480px) {
+  .currency {
+    grid-template-columns: 24px 16px 36px 10px 1fr 36px 24px;
+    gap: 10px;
+  }
+
+  .currency__flag {
+    width: 24px;
+  }
+
+  .currency__text {
+    font-size: 14px;
+  }
+}

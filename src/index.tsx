@@ -19,9 +19,7 @@ const composeEnhancers =
     // @ts-ignore
     ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
     : compose;
-const enhancer = composeEnhancers(
-  applyMiddleware(thunk)
-);
+const enhancer = composeEnhancers(applyMiddleware(thunk));
 export const store = createStore(rootReducer, enhancer);
 
 const root = ReactDOM.createRoot(

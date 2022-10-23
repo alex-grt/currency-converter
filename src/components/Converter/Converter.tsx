@@ -7,7 +7,8 @@ import { rubleData } from '../../utils/rubleData';
 
 const Converter: FC = () => {
   const [inputValue, setInputValue] = useState('');
-  const [result, setResult] = useState<any>('0');
+  const [result, setResult] = useState('0');
+  const [charWrapping, setCharWrapping] = useState(false);
   const { data } = useAppSelector(store => store.data);
   const modifiedData: ICurrencies = {
     RUB: rubleData,
@@ -50,6 +51,12 @@ const Converter: FC = () => {
     const finalResult = calculationResult.includes('NaN')
       ? 'Нет данных о валюте, либо проверьте формат ввода'
       : calculationResult;
+
+    if (finalResult.includes('руб.') || finalResult.includes('$')) {
+      setCharWrapping(true);
+    } else {
+      setCharWrapping(false);
+    };
 
     setResult(finalResult);
   };
@@ -101,7 +108,12 @@ const Converter: FC = () => {
           Конвертировать
         </button>
       </form>
-      <p className="converter__result">{result}</p>
+      <p
+        className="converter__result"
+        style={charWrapping ? {wordBreak: 'break-all'} : {wordBreak: 'normal'}}
+      >
+        {result}
+      </p>
     </div>
   );
 }

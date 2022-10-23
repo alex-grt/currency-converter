@@ -36,7 +36,7 @@ const Currency: FC<ICurrencyProps> = ({ item }) => {
       <p className="currency__text">{coin}</p>
       <p className="currency__text">{charCode}</p>
       <p className="currency__text">=</p>
-      <p className="currency__text">
+      <p className="currency__text currency__text_wrap">
         {defaultCurrency
           ? priceDefault
           : data.Valute && data.Valute['USD'].Value
