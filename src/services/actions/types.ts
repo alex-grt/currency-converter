@@ -4,6 +4,7 @@ import {
   GET_DATA_FAILED,
   ENABLE_PRELOADER,
   DISABLE_PRELOADER,
+  SET_THEME,
   TOGGLE_THEME,
   SET_RUB,
   SET_USD
@@ -31,6 +32,11 @@ export interface IDisablePreloaderAction {
   readonly type: typeof DISABLE_PRELOADER;
 }
 
+export interface ISetThemeAction {
+  readonly type: typeof SET_THEME;
+  payload: boolean;
+}
+
 export interface IToggleThemeAction {
   readonly type: typeof TOGGLE_THEME;
 }
@@ -49,6 +55,7 @@ export type TActions =
   | IGetDataFailedAction
   | IEnablePreloaderAction
   | IDisablePreloaderAction
+  | ISetThemeAction
   | IToggleThemeAction
   | ISetRUBAction
   | ISetUSDAction;

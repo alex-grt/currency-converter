@@ -93,7 +93,7 @@ const Converter: FC = () => {
         />
         <button
           className={`converter__button ${
-            inputValue.length < 12 ? 'converter__button_inactive' : ''
+            inputValue.length < 12 && 'converter__button_inactive'
           }`}
           type="submit"
           disabled={inputValue.length < 12 ? true : false}

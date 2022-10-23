@@ -12,22 +12,38 @@
   font-weight: 400;
 }
 
-.switch__cover {
+.switch__label {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-}
-
-.switch__label {
+  position: relative;
   font-size: 16px;
   font-weight: 400;
 }
 
-.switch__label:hover {
-  cursor: pointer;
+.switch__radio {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
 }
 
-.switch__radio:hover {
+.switch__pseudoradio {
+  width: 12px;
+  height: 12px;
+  border: 3px solid #4040ff;
+  border-radius: 50%;
+  margin-left: 10px;
+  display: inline-block;
+  background-color: #fff;
+  vertical-align: middle;
+}
+
+.switch__radio:checked + .switch__pseudoradio {
+  background-image: radial-gradient(#4040ff, #fff);
+}
+
+.switch__label:hover {
   cursor: pointer;
 }

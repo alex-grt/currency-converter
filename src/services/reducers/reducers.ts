@@ -10,6 +10,7 @@ import {
   GET_DATA_FAILED,
   ENABLE_PRELOADER,
   DISABLE_PRELOADER,
+  SET_THEME,
   TOGGLE_THEME,
   SET_RUB,
   SET_USD,
@@ -22,10 +23,7 @@ import {
   IStateTheme
 } from './types';
 
-function setData(
-  state = initialData,
-  action: TActions
-): IStateData {
+function setData(state = initialData, action: TActions): IStateData {
   switch (action.type) {
     case GET_DATA_REQUEST: {
       return {
@@ -67,12 +65,13 @@ function setPreloader(
   }
 };
 
-function setTheme(
-  state = initialTheme,
-  action: TActions
-): IStateTheme {
+function setTheme(state = initialTheme, action: TActions): IStateTheme {
   switch (action.type) {
+    case SET_THEME: {
+      return { lightTheme: action.payload };
+    }
     case TOGGLE_THEME: {
+      localStorage.setItem('lightTheme', JSON.stringify(!state.lightTheme));
       return { lightTheme: !state.lightTheme };
     }
     default: { return state; }

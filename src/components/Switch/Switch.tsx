@@ -18,8 +18,8 @@ const Switch: FC = () => {
   return (
     <div className="switch">
       <p className="switch__title">Валюта расчётов:</p>
-      <div className="switch__cover">
-        <label className="switch__label" htmlFor="rub">RUB</label>
+      <label className="switch__label">
+        RUB
         <input
           className="switch__radio"
           type="radio"
@@ -28,9 +28,10 @@ const Switch: FC = () => {
           onChange={setRUB}
           checked={baseCurrency === 'RUB' ? true : false}
         />
-      </div>
-      <div className="switch__cover">
-        <label className="switch__label" htmlFor="usd">USD</label>
+        <span className="switch__pseudoradio" />
+      </label>
+      <label className="switch__label">
+        USD
         <input
           className="switch__radio"
           type="radio"
@@ -39,7 +40,8 @@ const Switch: FC = () => {
           onChange={setUSD}
           checked={baseCurrency === 'USD' ? true : false}
         />
-      </div>
+        <span className="switch__pseudoradio" />
+      </label>
     </div>
   );
 }
